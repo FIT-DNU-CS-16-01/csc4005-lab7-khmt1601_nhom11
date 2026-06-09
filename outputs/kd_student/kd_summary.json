@@ -1,0 +1,8 @@
+{
+  "student_checkpoint": "outputs\\kd_student\\student_best.pt",
+  "best_val_macro_f1": 0.9177156177156176,
+  "student_model": "mobilenet_v2",
+  "teacher_checkpoint": "checkpoints/teacher_vit_best_model.pt",
+  "alpha": 0.5,
+  "temperature": 4.0
+}

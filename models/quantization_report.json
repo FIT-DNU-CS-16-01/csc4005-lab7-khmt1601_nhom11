@@ -1,0 +1,9 @@
+{
+  "method": "onnx_dynamic_quantization",
+  "input_onnx": "models\\vit_smartcampus.onnx",
+  "output_onnx": "models\\vit_smartcampus_dynamic_int8.onnx",
+  "weight_type": "QInt8",
+  "baseline_size_mb": 327.4034776687622,
+  "compressed_size_mb": 84.42547512054443,
+  "size_reduction_percent": 74.21362909102676
+}

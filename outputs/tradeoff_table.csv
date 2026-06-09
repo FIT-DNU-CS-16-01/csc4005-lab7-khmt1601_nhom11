@@ -1,0 +1,4 @@
+Model,Accuracy,Macro-F1,Mean latency @bs=1 (ms),Throughput (img/s),Model size (MB),Nhận xét
+Baseline ViT,0.9809885931558935,0.9747714680539719,243.97072800202292,4.098852383601152,327.4034776687622,"Độ chính xác cao nhưng mô hình lớn, tốc độ thấp."
+Quantized INT8,0.9746514575411914,0.9654194494088759,192.25985598750407,5.201293815933133,84.42547512054443,"Giảm kích thước đáng kể, tăng tốc suy luận, phù hợp CPU."
+KD Student,0.9797211660329531,0.9741333773058601,45.19091200316325,22.12834297148069,8.73914623260498,"Mô hình rất nhỏ, throughput cao, phù hợp triển khai edge/Smart Campus."

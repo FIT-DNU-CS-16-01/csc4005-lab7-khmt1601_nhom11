@@ -1,0 +1,5 @@
+| Model          |   Accuracy |   Macro-F1 |   Mean latency @bs=1 (ms) |   Throughput (img/s) |   Model size (MB) | Nhận xét                                                               |
+|:---------------|-----------:|-----------:|--------------------------:|---------------------:|------------------:|:-----------------------------------------------------------------------|
+| Baseline ViT   |   0.980989 |   0.974771 |                  243.971  |              4.09885 |         327.403   | Độ chính xác cao nhưng mô hình lớn, tốc độ thấp.                       |
+| Quantized INT8 |   0.974651 |   0.965419 |                  192.26   |              5.20129 |          84.4255  | Giảm kích thước đáng kể, tăng tốc suy luận, phù hợp CPU.               |
+| KD Student     |   0.979721 |   0.974133 |                   45.1909 |             22.1283  |           8.73915 | Mô hình rất nhỏ, throughput cao, phù hợp triển khai edge/Smart Campus. |

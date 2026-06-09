@@ -11,8 +11,9 @@ data/*
 checkpoints/*
 !checkpoints/.gitkeep
 models/*
+!models/quantization_report.json
 !models/.gitkeep
-outputs/*
+# outputs/*
 !outputs/.gitkeep
 
 *.zip
@@ -31,3 +32,5 @@ wandb/
 .DS_Store
 .vscode/
 .idea/
+
+inspect_onnx.py

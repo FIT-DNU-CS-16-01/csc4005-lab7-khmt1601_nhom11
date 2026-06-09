@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+from onnx import TensorProto
 
 from onnxruntime.quantization import QuantType, quantize_dynamic
 
@@ -31,7 +32,27 @@ def main() -> None:
     quantize_dynamic(
         model_input=str(input_path),
         model_output=str(output_path),
+
         weight_type=weight_type,
+
+        # 🔥 QUAN TRỌNG NHẤT: chỉ quantize linear layers
+        op_types_to_quantize=["MatMul", "Gemm"],
+
+        # ❌ không exclude conv kiểu hack nữa
+        nodes_to_exclude=None,
+
+        extra_options={
+            "DefaultTensorType": TensorProto.FLOAT,
+
+            # 🔥 CHỐT: tránh ConvInteger graph
+            "MatMulConstBOnly": True,
+
+            # 🔥 giữ graph stable
+            "EnableSubgraph": False,
+
+            # 🔥 tránh ORT strict check lỗi metadata
+            "ForceQuantizeNoInputCheck": True
+        }
     )
 
     report = {

@@ -1,0 +1,8 @@
+{
+  "accuracy": 0.9797211660329531,
+  "macro_f1": 0.9741333773058601,
+  "checkpoint": "outputs/kd_student/student_best.pt",
+  "model_size_mb": 8.73914623260498,
+  "num_samples": 789,
+  "student_model": "mobilenet_v2"
+}
