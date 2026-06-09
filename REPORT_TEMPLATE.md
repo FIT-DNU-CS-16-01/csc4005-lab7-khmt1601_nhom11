@@ -3,6 +3,7 @@
 ## 1. Thông tin
 
 | STT | Họ tên | Mã sinh viên | Lớp |
+| :-: | ------ | ------------ | --- |
 |  1  | Trần Trường Giang    | 1671040009          | KHMT 16-01 |
 |  2  | Nguyễn Văn Huy    | 1671040013          | KHMT 16-01 |
 
